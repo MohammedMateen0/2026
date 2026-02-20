@@ -101,3 +101,29 @@ Focus:
 * Longest Substring Without Repeating Characters
 * Time-pressured problem solving
 * Code speed optimization
+## 📅 Day 2 — Medium Patterns (Hashing + Heap + Sliding Window)
+
+### 🔹 Problems Covered
+
+* Group Anagrams (LeetCode 49)
+* Top K Frequent Elements (LeetCode 347)
+* Longest Substring Without Repeating Characters (LeetCode 3)
+
+### 🧠 Concepts Learned
+
+* Frequency Tuple as HashMap Key
+* Heap (Priority Queue) Optimization
+* Sliding Window Technique
+* Two Pointer Control (left & right)
+* While vs If in window shrinking
+* String Indexing in algorithmic patterns
+
+### ⚡ Complexity Focus
+
+* Group Anagrams: O(n * k)
+* Top K Frequent (Heap): O(n log k)
+* Sliding Window: O(n)
+
+### 🎯 Key Milestone
+
+Transitioned from Easy problems to Core Medium interview patterns.
