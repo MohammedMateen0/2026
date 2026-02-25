@@ -84,3 +84,87 @@ Even if a string contains `#`, the decoder reads the exact number of characters 
 
 Sliding Window pattern reinforced.
 String encoding/decoding implemented using robust length-prefix method.
+# Day 5 — Morning Session
+
+## Fixed Sliding Window (Permutation in String - LC 567)
+
+### 🎯 Objective
+
+Master the **Fixed Sliding Window** pattern where the window size remains constant.
+
+---
+
+## 🧠 Problem
+
+**Permutation in String (LeetCode 567)**
+
+Given two strings `s1` and `s2`, return `True` if `s2` contains a permutation of `s1`.
+
+Example:
+
+```
+s1 = "ab"
+s2 = "eidbaooo"
+```
+
+Output:
+
+```
+True
+```
+
+Because `"ba"` exists in `s2`.
+
+---
+
+## 🔍 Core Concept
+
+A permutation is simply an **anagram**.
+
+So instead of generating permutations (O(n!)),
+we compare character frequency counts using a **fixed-size sliding window**.
+
+---
+
+## ⚙️ Engineering Approach
+
+1. If `len(s1) > len(s2)` → return `False`
+2. Use two frequency arrays of size 26 (lowercase letters).
+3. Build frequency for:
+
+   * `s1`
+   * First window of `s2`
+4. Slide window:
+
+   * Add right character
+   * Remove left character
+5. Compare arrays at each step.
+
+---
+
+## ⏱ Complexity
+
+Time: **O(n)**
+Space: **O(1)** (constant 26-size array)
+
+---
+
+## 📌 Pattern Type
+
+| Pattern               | Type           |
+| --------------------- | -------------- |
+| Longest Substring     | Dynamic Window |
+| Stock Profit          | Reset Window   |
+| Permutation in String | Fixed Window   |
+
+---
+
+## 🚀 Key Takeaway
+
+A fixed sliding window requires:
+
+* Adding one element
+* Removing one element
+* Maintaining constant window size
+
+This pattern is heavily tested in product-based interviews.
