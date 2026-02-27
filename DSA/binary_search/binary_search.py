@@ -12,7 +12,7 @@ class Day_6:
             else:
                 return True
         return False
-    def search_matrix(matrix:list[list[int]],target:int)->bool:
+    def search_matrix(self,matrix:list[list[int]],target:int)->bool:
         if not matrix or not matrix[0]:
             return False
         m = len(matrix)
