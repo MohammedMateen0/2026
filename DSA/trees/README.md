@@ -74,3 +74,69 @@ Understanding recursion stack depth is critical for technical interviews.
 * Trees test multi-state reasoning and stack awareness.
 
 This session builds foundational depth for advanced tree problems.
+## Day 11 — Breadth First Search (Level Order Traversal)
+
+### Problem
+
+Binary Tree Level Order Traversal (LeetCode 102)
+
+Return node values level by level.
+
+Example:
+
+```
+    3
+   / \
+  9   20
+     /  \
+    15   7
+```
+
+Output:
+
+[[3], [9, 20], [15, 7]]
+
+---
+
+### Approach
+
+This problem uses **Breadth-First Search (BFS)**.
+
+Instead of recursion, BFS uses a **Queue (FIFO)**.
+
+Implementation uses `collections.deque` for efficient O(1) operations.
+
+Algorithm:
+
+1. Initialize queue with root node
+2. While queue is not empty
+3. Determine number of nodes at current level
+4. Process those nodes
+5. Add their children to queue
+
+---
+
+### Important Engineering Detail
+
+Avoid using a normal Python list as a queue.
+
+Bad approach:
+
+queue.pop(0) → O(n)
+
+Correct approach:
+
+```python
+from collections import deque
+queue.popleft()  # O(1)
+```
+
+---
+
+### Complexity
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+
+Maximum queue size equals the **width of the tree**.
+
