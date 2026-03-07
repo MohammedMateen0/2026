@@ -139,4 +139,46 @@ Time Complexity: O(n)
 Space Complexity: O(n)
 
 Maximum queue size equals the **width of the tree**.
+## Day 12 — Binary Search Trees
+
+### Problems Solved
+
+1. Validate Binary Search Tree (LeetCode 98)
+2. Lowest Common Ancestor in a BST (LeetCode 235)
+
+---
+
+### Validate BST
+
+A valid BST requires:
+
+Left subtree < node
+Right subtree > node
+
+Instead of checking only immediate children, we propagate **bounds** down the recursion.
+
+Example rule:
+
+```python
+validate(node, low, high)
+```
+
+Time Complexity: O(n)
+
+---
+
+### Lowest Common Ancestor (BST)
+
+Uses BST ordering to avoid searching the entire tree.
+
+Logic:
+
+* if both nodes < root → go left
+* if both nodes > root → go right
+* otherwise → root is LCA
+
+Time Complexity:
+Average O(log n)
+
+Worst case O(n)
 
