@@ -75,3 +75,102 @@ Correct approach:
 * High-cardinality handling separates junior and senior ML engineers.
 
 This session strengthens production-level ML thinking.
+## Day 11 — Feature Scaling
+
+### Problem
+
+Machine learning models can behave poorly when features have very different numeric ranges.
+
+Example:
+
+| Feature | Range            |
+| ------- | ---------------- |
+| Age     | 18–80            |
+| Income  | 50,000–5,000,000 |
+
+Distance-based and gradient-based models may incorrectly assume larger-scale features are more important.
+
+---
+
+### Solution: Feature Scaling
+
+Feature scaling ensures that all features operate on a comparable numerical scale.
+
+---
+
+### Standardization (StandardScaler)
+
+Standardization transforms data to have:
+
+Mean = 0
+Standard Deviation = 1
+
+Formula:
+
+z = (x − mean) / standard deviation
+
+Implementation:
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+```
+
+Important rule:
+
+* `fit()` only on training data
+* `transform()` on both training and test data
+
+This prevents **data leakage**.
+
+---
+
+### Min-Max Normalization (MinMaxScaler)
+
+Scales values into the range:
+
+0 → 1
+
+Formula:
+
+(x − min) / (max − min)
+
+Example usage:
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+```
+
+---
+
+### When Scaling Is Necessary
+
+Scaling is important for models relying on distance or gradients:
+
+* Logistic Regression
+* KNN
+* SVM
+* Neural Networks
+* PCA
+
+Scaling is generally **not required** for tree-based models:
+
+* Decision Trees
+* Random Forest
+* XGBoost
+* LightGBM
+
+These models split using thresholds rather than distances.
+
+---
+
+### Key Takeaways
+
+* Feature scaling prevents numerical dominance of large-range features.
+* Always fit scalers on training data only.
+* Preventing data leakage is critical for reliable model evaluation.
+
