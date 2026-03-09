@@ -182,3 +182,43 @@ Average O(log n)
 
 Worst case O(n)
 
+## Day 13 — Advanced Tree Patterns
+
+This session covers three important tree algorithms commonly asked in technical interviews.
+
+### 1. Kth Smallest Element in a BST
+
+Uses **inorder traversal** because BST inorder traversal produces sorted values.
+
+Traversal order:
+
+Left → Root → Right
+
+By counting nodes during traversal, the k-th visited node is the answer.
+
+Time Complexity: O(n)
+Space Complexity: O(h)
+
+---
+
+### 2. Diameter of Binary Tree
+
+The diameter is the longest path between any two nodes in the tree.
+
+At every node:
+
+diameter candidate = height(left) + height(right)
+
+We compute heights recursively and update the maximum diameter during traversal.
+
+Time Complexity: O(n)
+
+---
+
+### 3. Balanced Binary Tree
+
+A tree is balanced if the height difference between left and right subtrees is at most 1.
+
+To avoid repeated height computation, the algorithm returns **-1** when an imbalance is detected.
+
+This enables early termination and reduces complexity from O(n²) to O(n).
