@@ -45,3 +45,65 @@ Each fold maintains this same ratio.
 * Prevents evaluation randomness
 * Provides more robust performance estimates
 * Essential for reliable ML model validation
+## Day 13 — Model Evaluation Metrics
+
+Machine learning models must be evaluated using more than just accuracy, especially when dealing with imbalanced datasets.
+
+### Confusion Matrix
+
+A confusion matrix summarizes prediction results.
+
+| Actual / Predicted | Positive            | Negative            |
+| ------------------ | ------------------- | ------------------- |
+| Positive           | True Positive (TP)  | False Negative (FN) |
+| Negative           | False Positive (FP) | True Negative (TN)  |
+
+---
+
+### Precision
+
+Formula:
+
+Precision = TP / (TP + FP)
+
+Meaning:
+
+When the model predicts positive, how often is it correct?
+
+High precision means fewer false alarms.
+
+---
+
+### Recall (Sensitivity)
+
+Formula:
+
+Recall = TP / (TP + FN)
+
+Meaning:
+
+Out of all actual positive cases, how many were correctly identified.
+
+High recall means fewer missed cases.
+
+---
+
+### F1 Score
+
+F1 is the harmonic mean of Precision and Recall.
+
+F1 = 2 * (Precision * Recall) / (Precision + Recall)
+
+This metric is especially useful for **imbalanced datasets**.
+
+---
+
+### Key Insight
+
+Accuracy alone can be misleading in problems such as:
+
+* Fraud detection
+* Medical diagnosis
+* Spam detection
+
+In these cases, metrics such as **Precision, Recall, and F1 Score** provide better insight into model performance.
