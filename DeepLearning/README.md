@@ -62,3 +62,41 @@ Gradients show how the loss changes with respect to the weights.
 
 These gradients are later used by optimizers (like SGD or Adam) to update the model parameters.
 
+## Day 16 — Neural Network Architecture (PyTorch)
+
+A neural network in PyTorch is created by inheriting from `torch.nn.Module`.
+
+### Model Structure
+
+The model consists of three fully connected layers:
+
+* Input Layer → 5 features
+* Hidden Layer 1 → 16 neurons
+* Hidden Layer 2 → 8 neurons
+* Output Layer → 3 neurons (classification classes)
+
+### Forward Pass
+
+The forward method defines how data flows through the network.
+
+Hidden layers use ReLU activation functions.
+
+The final layer outputs raw logits for classification.
+
+### Example Input
+
+Input tensor shape:
+
+(1,5)
+
+Output tensor shape:
+
+(1,3)
+
+### Key Concept
+
+Neural networks combine:
+
+* linear layers
+* activation functions
+* gradient computation (autograd)
