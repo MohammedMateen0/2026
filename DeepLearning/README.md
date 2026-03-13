@@ -100,3 +100,29 @@ Neural networks combine:
 * linear layers
 * activation functions
 * gradient computation (autograd)
+## Day 17 — PyTorch Training Loop
+
+This implementation demonstrates the core training cycle of a neural network in PyTorch.
+
+### Components
+
+Model
+Loss Function (CrossEntropyLoss)
+Optimizer (Adam)
+
+### Training Steps
+
+1. Forward pass → model generates predictions
+2. Loss calculation → compares predictions to labels
+3. `optimizer.zero_grad()` clears previous gradients
+4. `loss.backward()` computes gradients using autograd
+5. `optimizer.step()` updates model weights
+
+### Why `zero_grad()` Is Important
+
+PyTorch accumulates gradients by default.
+Without clearing them, gradients from previous iterations would accumulate and produce incorrect weight updates.
+
+### Key Concept
+
+Forward Pass → Loss → Backpropagation → Weight Update
