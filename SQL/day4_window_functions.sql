@@ -1,3 +1,5 @@
+-- Day 4: Window Functions Practice
+-- Topic: Second Highest Salary per Department
 CREATE TABLE Employees(
     EmployeeID INT,
     Name TEXT,

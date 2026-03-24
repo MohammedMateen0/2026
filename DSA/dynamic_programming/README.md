@@ -16,4 +16,3 @@
 ## Progress
 - Day 18: 1D DP
 - Day 19: 2D DP
-- Day 20: Knapsack DP
