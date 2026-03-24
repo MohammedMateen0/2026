@@ -91,3 +91,74 @@ LSTM:
 
 ## Status
 ✅ Concepts understood  
+# Day 20 - Self-Attention & Transformers
+
+## 1. Problem with RNN/LSTM
+
+- Sequential processing → slow
+- Cannot parallelize efficiently
+- Long sequences → information loss (vanishing gradient)
+
+Example:
+A 40-page document → early information forgotten
+
+---
+
+## 2. Transformer Idea
+
+Instead of reading tokens one by one:
+
+→ Process all tokens simultaneously  
+→ Learn relationships between every pair of words
+
+---
+
+## 3. Self-Attention Mechanism
+
+Each word creates 3 vectors:
+- Query (Q)
+- Key (K)
+- Value (V)
+
+---
+
+## 4. Attention Formula
+
+Attention(Q, K, V) = softmax(QKᵀ / √d) V
+
+---
+
+## 5. Intuition
+
+- Compare each word with every other word
+- Assign importance scores
+- Aggregate relevant information
+
+Example:
+"He" → attends to "landlord"  
+"It" → attends to "deposit"
+
+---
+
+## 6. Why It Beats LSTM
+
+| Feature | LSTM | Transformer |
+|--------|------|------------|
+| Processing | Sequential | Parallel |
+| Long-range context | Weak | Strong |
+| Speed | Slow | Fast (GPU optimized) |
+
+---
+
+## 7. Key Insight
+
+Self-attention = dynamic weighting of relationships
+
+Model decides:
+- What to focus on
+- What to ignore
+
+---
+
+## Status
+✅ Understood core attention mechanism

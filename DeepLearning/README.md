@@ -27,3 +27,19 @@
 
 ## Goal
 Build strong ML/DL foundation for real-world applications.
+
+## Day 20 - Self-Attention & Transformers
+
+### Concepts Covered
+- Limitation of RNN/LSTM
+- Self-Attention mechanism
+- Query, Key, Value vectors
+- Attention score computation
+
+### Implementation
+- Built simplified self-attention using PyTorch tensors
+
+### Key Insight
+Self-attention allows global context understanding with parallel computation.
+
+**Status:** ✅ Completed
