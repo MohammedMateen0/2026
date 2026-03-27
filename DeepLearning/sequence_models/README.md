@@ -162,3 +162,18 @@ Model decides:
 
 ## Status
 ✅ Understood core attention mechanism
+## Day 21 - Embeddings & Similarity Search
+
+### Concepts Covered
+- Word embeddings
+- Dense vector representations
+- Cosine similarity
+
+### Implementation
+- Built cosine similarity from scratch
+- Simulated embedding comparison
+
+### Key Insight
+Text similarity is computed as distance in vector space.
+
+**Status:** ✅ Completed
